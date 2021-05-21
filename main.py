@@ -42,7 +42,7 @@ rate_of_change = (end_date - start_date) / rate_of_change
 
 
 ## Trend Analysis grouped by citizen's residence
-size = (16, 10)
+size = (16, 15)
 fig, ax = plt.subplots(figsize = size)
 ax = plt.plot(df1['Date'], df1['Total_cases'])
 ax = plt.plot(df1['Date'], df1['ConfirmedIndianNational'], label = "Local Citizen")
@@ -50,4 +50,4 @@ ax = plt.plot(df1['Date'], df1['ConfirmedForeignNational'], label = "NRI")
 plt.xticks(rotation = 90)
 plt.xlabel('Date', fontsize = 10)
 plt.ylabel('Total Cases', fontsize = 10)
-
+plt.savefig('as.png')
